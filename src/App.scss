@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:sans-serif;
+    overflow: hidden !important;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(images/sun.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    
+
+}
+.main-container{
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    
+    
+    
+    
+}
+.card{
+
+    width: 400px;
+    height: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(235, 222, 222, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(129, 136, 233, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -86px;
+
+}
+
+h1{
+font-size: 2rem;
+font-weight: 900;
+
+
+}
+.card-data{
+    margin-top: -65px;
+    color: #fff;
+    text-shadow: 0 5px rgba($color: #000000, $alpha: 1.0);
+}
+
+  
