@@ -4,18 +4,27 @@ import axios from 'axios'
 
 const App = () => {
 
-    const [whther,setWhther]=useState({})
+    const [whther,setWhther]=useState({
+       main:{}
+    })
 
     useEffect(()=>{
         async function getData() {
-            const Api =process.env.API__KEY
+            const Api ='https://api.openweathermap.org/data/2.5/weather?&appid=65bb31cc25ec61fcee34c56bf77f928e&q=Malappuram,India&units=metric'
+         
+          try{
+              let responce =await axios.get(Api)
+              console.log(responce.data)
 
-            try{
-                let response =await axios.get(Api)
-                console.log(response)
-            }catch(err){
-                console.log( "error messages",err)
-            }
+
+              setWhther(responce.data)
+
+              
+          }
+          catch(err){
+            console.log(err)
+          }
+     
         }
 
         getData()
@@ -27,8 +36,8 @@ const App = () => {
             <div className="main-container">
                 <div className="card">
                      <div className="card-data">
-                     <h1>city name</h1>
-                     <h1>deg</h1>
+                     <h1>{whther.name}</h1>
+                     <h1>{`${Math.round(whther.main.temp)}`}&deg;c</h1>
                      <h1>name</h1> 
                      </div>
                 </div>
