@@ -5,7 +5,11 @@ import axios from 'axios'
 const App = () => {
 
     const [whther,setWhther]=useState({
-       main:{}
+      
+       main:{},
+
+       weather:[{}] //whther name
+
     })
 
     useEffect(()=>{
@@ -38,7 +42,9 @@ const App = () => {
                      <div className="card-data">
                      <h1>{whther.name}</h1>
                      <h1>{`${Math.round(whther.main.temp)}`}&deg;c</h1>
-                     <h1>name</h1> 
+                     <h1>{whther.weather[0].main}</h1>
+                     <h1>{whther.weather[0].description}</h1>
+                    
                      </div>
                 </div>
             </div>

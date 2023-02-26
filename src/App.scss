@@ -14,11 +14,12 @@
     background-repeat: no-repeat;
     object-fit: cover;
     
+    
 
 }
 .main-container{
     display: flex;
-    width: 100%;
+    width: 100%;              
     min-height: 100vh;
     justify-content: center;
     align-items: center;
@@ -32,7 +33,7 @@
     width: 400px;
     height: 400px;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 64px;
     background-color: rgba(235, 222, 222, 0.2);
     box-shadow: 0 8px 32px 0 rgba(129, 136, 233, 0.37);
     backdrop-filter: blur(10px);
@@ -43,6 +44,14 @@
     justify-content: center;
     margin-top: -86px;
 
+}
+
+@media screen and (max-width:768px) {
+      .card{
+        width: 244px;
+        height: 308px;
+    
+      }
 }
 
 h1{
